@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">Observable Inflator</string>
+  <string name="hijacked_textview">Hijacked TextView</string>
+</resources>
