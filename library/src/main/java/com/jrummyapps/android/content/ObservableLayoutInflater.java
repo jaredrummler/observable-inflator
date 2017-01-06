@@ -33,12 +33,6 @@ import java.lang.reflect.Method;
  */
 public class ObservableLayoutInflater extends LayoutInflater {
 
-  // ------------------------------------------------------------------------------------------------------------------
-  // Much of this code was derived from:
-  //   - https://github.com/chrisjenx/Calligraphy
-  //   - https://github.com/chemouna/Decor
-  // ------------------------------------------------------------------------------------------------------------------
-
   private static final String[] ANDROID_WIDGET_PREFIXES = {"android.widget.", "android.webkit."};
 
   private ObservableViewFactory viewFactory;
@@ -88,10 +82,6 @@ public class ObservableLayoutInflater extends LayoutInflater {
     } else {
       super.setFactory2(factory2);
     }
-  }
-
-  @Override protected View onCreateView(View parent, String name, AttributeSet attrs) throws ClassNotFoundException {
-    return observeAndCreateView(super.onCreateView(parent, name, attrs), attrs);
   }
 
   @Override protected View onCreateView(String name, AttributeSet attrs) throws ClassNotFoundException {
